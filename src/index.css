@@ -1,13 +1,140 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  margin: 0 auto;
+  padding: 1em 0;
+  max-width: 550px;
+  min-width: 400px;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #ffc300, #fb5607);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+h1 {
+  margin-bottom: 0.3em;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 37px;
+}
+
+.home p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.home {
+  color: whitesmoke;
+}
+
+.home--button {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 1em 2em;
+  margin-top: 2em;
+  background: #3a86ff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.quest,
+.score {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.container {
+  text-align: center;
+}
+
+.quest--question {
+  color: whitesmoke;
+  text-align: start;
+  margin: 30px 75px 0px 0px;
+  width: fit-content;
+}
+
+.line {
+  margin-top: 1.5em;
+  border-bottom: 2px solid darkblue;
+}
+
+.quest--answers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2em;
+  column-gap: 10px;
+  color: black;
+  margin-top: 1em;
+}
+
+.quest--answers--answer {
+  font-size: 10.24px;
+  line-height: 12px;
+  text-align: center;
+  color: whitesmoke;
+  background: #3a86ff;
+  padding: 0.2em 1em;
+  border: 2px solid darkblue;
+  border-radius: 7.94239px;
+  cursor: pointer;
+}
+
+.quest--answers .selected {
+  background: darkblue;
+  border: 3px solid #03045e;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2em;
+  margin-top: 2em;
+  color: whitesmoke;
+}
+
+.btn-check-answers,
+.btn-play-again {
+  padding: 0.5em 2em;
+  color: whitesmoke;
+  background: #3a86ff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#selected-wrong {
+  background: lightcoral;
+}
+
+#selected-good {
+  background: lightgreen;
+}
+
+button:focus {
+  outline: none;
+}
+
+.score-comment {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+strong {
+  font-size: 30px;
 }
