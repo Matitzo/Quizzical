@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/Quizzical/static/css/main.596bc1ae.css",
-    "main.js": "/Quizzical/static/js/main.e450dbfd.js",
+    "main.css": "/Quizzical/static/css/main.617f15ba.css",
+    "main.js": "/Quizzical/static/js/main.cfa8df01.js",
     "static/js/787.28cb0dcd.chunk.js": "/Quizzical/static/js/787.28cb0dcd.chunk.js",
+    "static/media/girl-with-red-hat.jpg": "/Quizzical/static/media/girl-with-red-hat.b1dcc5ed33539c819f52.jpg",
+    "static/media/unsplash.jpg": "/Quizzical/static/media/unsplash.8f98a84a7cffd669ef43.jpg",
     "index.html": "/Quizzical/index.html",
-    "main.596bc1ae.css.map": "/Quizzical/static/css/main.596bc1ae.css.map",
-    "main.e450dbfd.js.map": "/Quizzical/static/js/main.e450dbfd.js.map",
+    "main.617f15ba.css.map": "/Quizzical/static/css/main.617f15ba.css.map",
+    "main.cfa8df01.js.map": "/Quizzical/static/js/main.cfa8df01.js.map",
     "787.28cb0dcd.chunk.js.map": "/Quizzical/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.596bc1ae.css",
-    "static/js/main.e450dbfd.js"
+    "static/css/main.617f15ba.css",
+    "static/js/main.cfa8df01.js"
   ]
 }
