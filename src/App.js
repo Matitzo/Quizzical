@@ -4,12 +4,14 @@ import Home from "./Components/Home.js";
 import Score from "./Components/Score.js";
 
 export default function App() {
-  const [data, setData] = React.useState(getApi);
+  const [category, setCategory] = React.useState("");
   const [quiz, setQuiz] = React.useState(false);
   const [checkAnswers, setCheck] = React.useState(false);
+  const [data, setData] = React.useState();
 
   function getQuiz() {
-    setQuiz(!quiz);
+    setQuiz((prevData) => !prevData);
+    setData(getApi);
   }
 
   function handleSelect(event) {
@@ -40,7 +42,16 @@ export default function App() {
   }
 
   function getApi() {
-    fetch(`https://opentdb.com/api.php?amount=5`)
+    console.log(
+      `https://opentdb.com/api.php?amount=5${
+        category ? `&category=${category}` : ""
+      }`
+    );
+    fetch(
+      `https://opentdb.com/api.php?amount=5${
+        category ? `&category=${category}` : ""
+      }`
+    )
       .then((res) => res.json())
       .then((data) => {
         const question = data.results.map((result) => {
@@ -74,11 +85,12 @@ export default function App() {
           getQuiz={getQuiz}
           checkAnswers={checkAnswers}
           handleCheck={handleCheck}
-          newGame={getApi}
+          playAgain={getApi}
+          newGame={setQuiz}
         />
       </div>
     );
   } else {
-    return <Home getQuiz={getQuiz} />;
+    return <Home getQuiz={getQuiz} category={setCategory} id={category} />;
   }
 }

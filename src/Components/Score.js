@@ -1,8 +1,13 @@
 import React from "react";
 
 export default function Score(props) {
+  function playAgain() {
+    props.playAgain();
+    props.handleCheck();
+  }
+
   function newGame() {
-    props.newGame();
+    props.newGame((prevData) => !prevData);
     props.handleCheck();
   }
 
@@ -47,9 +52,14 @@ export default function Score(props) {
           Check
         </button>
       ) : (
-        <button className="btn-play-again" onClick={newGame}>
-          Play again
-        </button>
+        <div>
+          <button className="btn-play-again" onClick={playAgain}>
+            Play again
+          </button>
+          <button className="btn-new-game" onClick={newGame}>
+            New Game
+          </button>
+        </div>
       )}
     </div>
   );

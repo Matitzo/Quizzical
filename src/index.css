@@ -3,13 +3,22 @@
   margin: 0;
 }
 
+body {
+  background-image: url("../public/unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 #root {
   margin: 0 auto;
   padding: 1em 0;
   max-width: 550px;
   min-width: 400px;
   min-height: 100vh;
-  background-image: linear-gradient(45deg, #ffc300, #fb5607);
+  background-color: #03045e;
+  background-image: url("../public/girl-with-red-hat.jpg");
+  background-size: cover;
+  background-position: center;
   border: 7px solid darkblue;
 }
 
@@ -26,6 +35,11 @@ h1 {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 37px;
+}
+
+h3,
+.quest--answers--answer {
+  text-shadow: 0px 0px 10px black;
 }
 
 .home p {
@@ -50,6 +64,24 @@ h1 {
   cursor: pointer;
 }
 
+.categories {
+  margin: 1em auto;
+  text-align: center;
+  color: whitesmoke;
+}
+
+#categories-category {
+  text-align: center;
+  margin-top: 0.5em;
+  padding: 0.3em;
+  font-size: 1rem;
+  background-color: #03045e;
+  color: white;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
 .quest,
 .score {
   padding-left: 3em;
@@ -69,11 +101,13 @@ h1 {
 
 .line {
   margin-top: 1.5em;
-  border-bottom: 2px solid darkblue;
+  border-bottom: 2px solid whitesmoke;
 }
 
 .quest--answers {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.8em;
   justify-content: flex-start;
   align-items: center;
   margin-top: 2em;
@@ -109,14 +143,29 @@ h1 {
 }
 
 .btn-check-answers,
-.btn-play-again {
+.btn-play-again,
+.btn-new-game {
   padding: 0.5em 2em;
+  margin-bottom: 0.8em;
   color: whitesmoke;
   background: #3a86ff;
   border-radius: 10px;
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
+}
+
+.btn-check-answers:hover,
+.btn-play-again:hover,
+.btn-new-game:hover {
+  cursor: pointer;
+}
+
+.btn-check-answers:active,
+.btn-play-again:active,
+.btn-new-game:active,
+.home--button:active {
+  box-shadow: 2px 2px 5px black;
 }
 
 #selected-wrong {
@@ -134,6 +183,7 @@ button:focus {
 .score-comment {
   font-size: 20px;
   line-height: 20px;
+  text-shadow: 1px 1px 1px black;
 }
 
 strong {
